@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import Navbar from "./components/Navbar"; 
-//import ChatPage from "./pages/ChatPage"; 
+import ChatPage from "./pages/ChatPage"; 
 
 
 const App = () => {
@@ -106,6 +106,7 @@ const App = () => {
 
       {/* Chat Page */}
       {/* <ChatPage /> */}
+      {/*not in use */}
 
     
     </div>
@@ -113,3 +114,5 @@ const App = () => {
 };
 
 export default App;
+
+
