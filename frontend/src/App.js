@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import Navbar from "./components/Navbar"; 
-import ChatPage from "./pages/ChatPage"; 
+//import ChatPage from "./pages/ChatPage"; 
 
 
 const App = () => {
