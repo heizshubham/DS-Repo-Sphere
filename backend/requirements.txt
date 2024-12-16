@@ -1,0 +1,8 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+pydantic==2.7.0
+python-multipart==0.0.9  # For handling file uploads
+requests==2.31.0
+#SQLAlchemy==2.0.29       # ORM library for database interactions
+#psycopg2-binary==2.9.9   # PostgreSQL driver (remove if using MySQL or SQLite)
+python-dotenv==1.0.1     # For environment variables

@@ -1,0 +1,12 @@
+{
+  "name": "ds-repo-sphere",
+  "version": "1.0.0",
+  "description": "```shell  cd backend docker build -t fastapi-backend -f Dockerfile . docker run -p 8080:8000 -t fastapi-backend ``` ```to remove all untagged images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

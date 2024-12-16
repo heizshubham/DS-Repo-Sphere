@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend  # Path to backend directory containing Dockerfile
+    container_name: backend_service
+    ports:
+      - "8000:8000"  # Map backend's port 8000 to localhost
+    environment:
+      - ENV=development
+      - BACKEND_PORT=8000
+    volumes:
+      - ./backend/src:/app/src  # Mount code for live changes
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      context: ./frontend  # Path to frontend directory containing Dockerfile
+    container_name: frontend_service
+    ports:
+      - "3000:3000"  # Map frontend's port 3000 to localhost
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend_service:8000  # Point frontend to backend service
+    volumes:
+      - ./frontend/src:/app/src  # Mount code for live changes
+    depends_on:
+      - backend  # Ensure backend starts before frontend
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
